@@ -3,33 +3,34 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 function App() {
   let [showContent, SetShowContent]= useState(false)
-useGSAP(()=>{
-  const tl = gsap.timeline();
-  tl.to(".vi-mask-group",{
-    rotate:10,
-    ease: "power4.easeInOut",
-    transformOrigin: "50% 50%",
-    duration: 0.8
+useGSAP(() => {
+    const tl = gsap.timeline();
 
-  }).to(".vi-mask-group", {
-    scale: 30,
-    ease: "power4.easeInOut",
-    transformOrigin: "50% 50%",
-    duration: 1.2,
-    delay: 0.5,
-    opacity: 0,
-    onUpdate:()=>{
-      if(this.progress>=0.8){
-        document.querySelector('.svg').remove();
-        SetShowContent(true);
-        this.kill();
-      }
-    }
-  })
+     tl.to(".vi-mask-group", {
+      rotate: 10,
+      duration: 2,
+      ease: "Power4.easeInOut",
+      transformOrigin: "50% 50%",
+    }).to(".vi-mask-group", {
+      scale: 10,
+      duration: 2,
+      delay: -1.8,
+      ease: "Expo.easeInOut",
+      transformOrigin: "50% 50%",
+      opacity: 0,
+      onUpdate: function () {
+        if (this.progress() >= 0.9) {
+          document.querySelector(".svg").remove();
+          SetShowContent(true);
+          this.kill();
+        }
+      },
+    });
+  });
 
 
 
-})
+
 
   return (
     <>
@@ -61,9 +62,22 @@ useGSAP(()=>{
             mask="url(#viMask)"
           />
         </svg>
-        
-       
-    </div>
+      </div>
+        {showContent && (
+          <div className="main w-full">
+            <div className="landing w-full h-screen bg-black">
+              <div className='imagesdiv w-full h-screen relative' >
+
+                <img src="./sky.png" alt="Sky" className='w-full h-full object-cover absolute' />
+                <img src="./bg.png" alt="Background" className='w-full h-full object-cover absolute' />
+                <img src="./girlbg.png" alt="Background" className='absolute -bottom-[80%] left-1/2 -translate-x-1/2' />
+                
+                
+                
+              </div>
+            </div>
+          </div>
+        )}
     </>
   )
 }
