@@ -69,11 +69,11 @@ function App() {
               </div>
               <div className="github-icon text-white flex items-center hover:text-gray-400 transition-all duration-300 cursor-pointer">
                 <a
-                  href="https://github.com/A-JA-Y"
+                  href="https://github.com/A-JA-Y/GTA6-Web"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaGithub />
+                  <FaGithub className="scale-[1.3]" />
                 </a>
               </div>
             </nav>
