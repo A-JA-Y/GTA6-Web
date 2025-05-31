@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+import React, { useState } from "react";
+import { FaGithub } from "react-icons/fa";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 function App() {
-  let [showContent, SetShowContent]= useState(false)
-useGSAP(() => {
+  let [showContent, SetShowContent] = useState(false);
+  useGSAP(() => {
     const tl = gsap.timeline();
 
-     tl.to(".vi-mask-group", {
+    tl.to(".vi-mask-group", {
       rotate: 10,
       duration: 2,
       ease: "Power4.easeInOut",
@@ -28,14 +29,10 @@ useGSAP(() => {
     });
   });
 
-
-
-
-
   return (
     <>
-    <div className='svg flex items-center justify-center fixed top-0 left-0 z-[100] w-full h-screen overflow-hidden bg-[#000]'>
-      <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+      <div className="svg flex items-center justify-center fixed top-0 left-0 z-[100] w-full h-screen overflow-hidden bg-[#000]">
+        <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
           <defs>
             <mask id="viMask">
               <rect width="100%" height="100%" fill="black" />
@@ -63,23 +60,45 @@ useGSAP(() => {
           />
         </svg>
       </div>
-        {showContent && (
-          <div className="main w-full">
-            <div className="landing w-full h-screen bg-black">
-              <div className='imagesdiv w-full h-screen relative' >
-
-                <img src="./sky.png" alt="Sky" className='w-full h-full object-cover absolute' />
-                <img src="./bg.png" alt="Background" className='w-full h-full object-cover absolute' />
-                <img src="./girlbg.png" alt="Background" className='absolute -bottom-[80%] left-1/2 -translate-x-1/2' />
-                
-                
-                
+      {showContent && (
+        <div className="main w-full">
+          <div className="landing w-full h-screen  ">
+            <nav className="w-full h-[10vh]  flex items-center justify-between px-10 bg-black opacity-60  fixed top-0 left-0 z-[100] ">
+              <div className="logo text-white text-2xl font-bold cursor-pointer">
+                VI
               </div>
+              <div className="github-icon text-white flex items-center hover:text-gray-400 transition-all duration-300 cursor-pointer">
+                <a
+                  href="https://github.com/A-JA-Y"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub />
+                </a>
+              </div>
+            </nav>
+            <div className="imagesdiv w-full h-screen relative">
+              <img
+                src="./sky.png"
+                alt="Sky"
+                className="w-full h-full object-cover absolute"
+              />
+              <img
+                src="./bg.png"
+                alt="Background"
+                className="w-full h-full object-cover absolute"
+              />
+              <img
+                src="./girlbg.png"
+                alt="Background"
+                className="absolute -bottom-[80%] left-1/2 -translate-x-1/2 z-[110]"
+              />
             </div>
           </div>
-        )}
+        </div>
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
