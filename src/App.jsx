@@ -65,7 +65,7 @@ function App() {
           <div className="landing w-full h-screen  ">
             <nav className="w-full h-[10vh]  flex items-center justify-between px-10 bg-black opacity-60  fixed top-0 left-0 z-[100] ">
               <div className="logo text-white text-2xl font-bold cursor-pointer">
-                VI
+                VI | Rokstar
               </div>
               <div className="github-icon text-white flex items-center hover:text-gray-400 transition-all duration-300 cursor-pointer">
                 <a
@@ -77,7 +77,7 @@ function App() {
                 </a>
               </div>
             </nav>
-            <div className="imagesdiv w-full h-screen relative">
+            <div className="imagesdiv w-full h-screen relative overflow-hidden ">
               <img
                 src="./sky.png"
                 alt="Sky"
@@ -91,7 +91,7 @@ function App() {
               <img
                 src="./girlbg.png"
                 alt="Background"
-                className="absolute -bottom-[80%] left-1/2 -translate-x-1/2 z-[110]"
+                className="absolute sm:-bottom-[85%] left-1/2 -translate-x-1/2 z-[110] bottom-10 sm:scale-100 scale-125 "
               />
             </div>
           </div>
