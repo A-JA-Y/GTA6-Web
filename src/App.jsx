@@ -99,17 +99,16 @@ function App() {
             <div className="btmbar w-full h-[10vh] z-[200]  bg-gradient-to-t from-black to-transparent fixed bottom-0 left-0  py-14 px-10 ">
               <div className="flex items-center  gap-4 text-white ">
                 <i className="ri-arrow-down-line text-3xl"></i>
-                <h3 className="font-[Helvetica_Now_Display] text-xl ">
+                <h3 className="font-[arial] text-xl ">
                   Scroll Down
                 </h3>
               </div>
 
-              
-                <img
-                  src="./ps5.png"
-                  alt="PS5"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2  h-[60px] "
-                />
+              <img
+                src="./ps5.png"
+                alt="PS5"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2  h-[60px] "
+              />
               
             </div>
           </div>
