@@ -37,12 +37,17 @@ function App() {
       const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
 
       gsap.to(".landing .text", {
-        x: `${xMove * 0.05}%`,
+        x: `${xMove * 0.1}%`,
         ease: "power1.out",
         duration: 0.5,
       });
       gsap.to(".imagesdiv .sky", {
         x: `${xMove * 0.07}%`,
+        ease: "power1.out",
+        duration: 0.5,
+      });
+      gsap.to(".imagesdiv .bg", {
+        x: `${xMove * 0.05}%`,
         ease: "power1.out",
         duration: 0.5,
       });
@@ -115,7 +120,7 @@ function App() {
               <img
                 src="./bg.png"
                 alt="Background"
-                className=" bg w-full h-full object-cover absolute"
+                className=" bg w-full h-full object-cover absolute scale-105"
               />
               <img
                 src="./girlbg.png"
