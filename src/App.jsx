@@ -145,7 +145,7 @@ function App() {
             </div>
           </div>
           <div className="w-full h-screen grid   bg-black">
-            <div className="containr flex  w-full text-white h-[80%]">
+            <div className="containr flex  flex-auto  w-full text-white h-[80%]">
               <div className="left-img relative w-1/2 ">
                 <img
                   src="./imag.png"
@@ -153,16 +153,16 @@ function App() {
                   className="w-full h-full scale-[1.5] absolute z-[200] object-contain "
                 />
               </div>
-              <div className="right-img w-1/2 ">
-                <h1 className=" text-8xl " >Still running,</h1>
-                <h1 className=" text-8xl " >Not hunting...</h1>
-                <p className="text-lg mt-4 font-[arial] p-5">
+              <div className="right-img w-1/2 pt-5 ">
+                <h1 className="text-4xl sm:text-8xl " >Still running,</h1>
+                <h1 className="text-4xl sm:text-8xl " >Not hunting...</h1>
+                <p className="sm:text-lg text-md mt-4 font-[arial] p-5">
                   Grand Theft Auto VI is an upcoming action-adventure game
                   developed by Rockstar North and published by Rockstar Games.
                   It is the sixth main entry in the Grand Theft Auto series,
                   following Grand Theft Auto V (2013). 
                 </p>
-                <p className="text-lg  font-[arial] pt-0 p-5">
+                <p className="sm:text-lg text-md font-[arial] pt-0 p-5 hidden sm:block">
                   The game is set in a fictional version of the United States,
                   with a focus on the state of San Andreas, which includes the
                   cities of Los Santos and San Fierro.
